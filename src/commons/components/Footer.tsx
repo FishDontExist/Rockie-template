@@ -1,9 +1,10 @@
+"use client";
 import React from "react";
 import Image from "next/image";
-import { StyledFooter } from "../css";
-import { Logo } from "../image";
+import { StyledFooter } from "../../app/(home)/css";
+import { Logo } from "../../app/(home)/image";
 
-export const Footer = () => {
+const Footer = () => {
 	return (
 		<StyledFooter>
 			<div className="container">
@@ -60,3 +61,5 @@ export const Footer = () => {
 		</StyledFooter>
 	);
 };
+
+export default Footer;

@@ -6,13 +6,13 @@ import Image from "next/image";
 //Assets
 import { StyledNavbar } from "../css";
 import Divider from "@mui/material/Divider";
-import { Notification, Profile, DarkMode, Logo } from "../image";
+import { Notification, Profile, DarkMode, Logo } from "../../app/(home)/image";
 
 //types
-import type { ButtonLinkMap } from "../types";
-import { Hamburger } from "./Hamburger";
+import type { ButtonLinkMap } from "../../app/(home)/types";
+import { Hamburger } from "../../app/(home)/components/Hamburger";
 
-export const Menu = () => {
+export const Header = () => {
 	const menuItems: ButtonLinkMap = {
 		Homepage: "/home",
 		"Swap Currency": "/swap",
@@ -79,4 +79,4 @@ export const Menu = () => {
 	);
 };
 
-export default Menu;
+export default Header;

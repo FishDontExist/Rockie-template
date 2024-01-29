@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const StyledCurrencyDiv = styled.section`
+    color: ${props => props.theme.pallete.colors.text.primary};
     display: flex;
     justify-content: center;
     margin: 0 auto;
@@ -8,7 +9,7 @@ export const StyledCurrencyDiv = styled.section`
     font-family: 'DM Sans', sans-serif;
     position: relative;
     top:-20px;
-    background-color: #FFF;
+    background-color: ${props => props.theme.pallete.colors.bg};
     width: max-content;
     padding: 15px;
     height:auto;
@@ -45,7 +46,8 @@ export const StyledCurrencyDiv = styled.section`
     
     
     .card:hover, .card:focus{
-        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+        background-color: ${props => props.theme.pallete.colors.div_hover.bg};
+        box-shadow: ${props => props.theme.pallete.colors.div_hover.shadow};
     }
     
     
@@ -60,7 +62,7 @@ export const StyledCurrencyDiv = styled.section`
             margin-left: 10px;
         }
         p:nth-child(3){
-            color: lightgray;
+            color: ${props => props.theme.pallete.colors.text.secondary};
         }
         img{
             height:20px;
@@ -85,16 +87,20 @@ export const StyledCurrencyDiv = styled.section`
             width: max-content;
         }
         .green{
-            background-color: #58BD7D;
+            background-color: ${props => props.theme.pallete.colors.green};
         }
         .red{
-            background-color: #D33535;
+            background-color: ${props => props.theme.pallete.colors.red};
         }
     }
     .MuiDivider-root{
-        background-color: #E5E5E5;
+        background-color: ${props => props.theme.pallete.colors.bg};
         
     }
+    .MuiButtonBase-root{
+        color: ${props => props.theme.pallete.colors.text.primary};
+            
+        }
     @media screen and (max-width: 500px){
         
         .card-container{
@@ -104,6 +110,7 @@ export const StyledCurrencyDiv = styled.section`
 
         }
         .MuiTabs-flexContainer{
+            
             display: grid;
             grid-template-columns: 1fr 1fr;
             grid-template-rows: 1fr 1fr;

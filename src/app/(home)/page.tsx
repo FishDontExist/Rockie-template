@@ -1,9 +1,14 @@
 "use client";
+import Image from "next/image";
+import { useState } from "react";
+
+//components
+import Button from "@mui/material/Button"; //MUI 
+import { Box, Tab } from "@mui/material";
+import { TabContext, TabList, TabPanel } from "@mui/lab";
+import { CurrencyCard, HowItWorks, TableRow, WhatIsRockie } from "./components";
 
 //Assets
-import Button from "@mui/material/Button"; //button form MUI
-
-import Image from "next/image";
 import {
 	StyledCurrencyDiv,
 	StyledInfoDiv,
@@ -11,17 +16,7 @@ import {
 } from "./css";
 import { UsFlag, Tether, Ethereum, GlobeImage, BNB } from "./image";
 
-import {
-	CurrencyCard,
-	Footer,
-	HowItWorks,
-	Menu,
-	TableRow,
-	WhatIsRockie,
-} from "./components";
-import { useState } from "react";
-import { Box, Tab, Tabs } from "@mui/material";
-import { TabContext, TabList, TabPanel } from "@mui/lab";
+
 
 const Page = () => {
 	const cardOptions: string[] = ["Fiat", "Coin", "Crypto", "Gold"];
@@ -48,7 +43,6 @@ const Page = () => {
 	};
 	return (
 		<>
-			<Menu />
 			<StyledInfoDiv>
 				<div className="info-text">
 					<h1>Safe buying and selling</h1>
@@ -221,12 +215,12 @@ const Page = () => {
 					</TabPanel>
 				</TabContext>
 			</StyledCurrencyDiv>
-			
-				<div className="title">
-					<h2>Live Exchange Rates</h2>
-					<Button variant="text" onClick={() => console.log("ali")}>
-						See all
-					</Button>
+
+			<div className="title">
+				<h2>Live Exchange Rates</h2>
+				<Button variant="text" onClick={() => console.log("ali")}>
+					See all
+				</Button>
 			</div>
 			<SytledLiveExchangeRates>
 				<table className="table">
@@ -260,7 +254,6 @@ const Page = () => {
 			</SytledLiveExchangeRates>
 			<HowItWorks />
 			<WhatIsRockie />
-			<Footer />
 		</>
 	);
 };

@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 
 export const StyledHowItWorks = styled.div`
-    background-color: #F7F7F7;
+    background-color: ${props => props.theme.pallete.colors.bg_secondry};
     padding: 15px;
     width: 100%;
     height: max-content;

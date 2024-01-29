@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 export const StyledFooter = styled.footer`
+    background-color: ${props => props.theme.pallete.colors.bg};
+    color: ${props => props.theme.pallete.colors.text.primary};
     .container{
         display: flex;
         justify-content: center;
@@ -39,10 +41,10 @@ export const StyledFooter = styled.footer`
         }
     }
     .footer-bottom{
-        background-color: #F7F7F7;
+        background-color: ${props => props.theme.pallete.colors.footer_bg};
         
         p{
-            color: #777E90;
+            color: ${props => props.theme.pallete.colors.text.third};
             font-size: small;
             padding:25px;
             margin: 0 5%;
@@ -69,9 +71,20 @@ export const StyledFooter = styled.footer`
     }
     @media screen and (max-width: 500px) {
         .container{
+            h5{
+                font-size: 14px;
+            }
+            p{
+                font-size: 12px;
+            }
             .options{
                 display: grid;
-                grid-template-columns: 1fr 
+                grid-template-columns: 1fr;
+                margin: 0;
+                .widget-link{
+                    text-align: center;
+                    margin: 0 auto;
+                }
                 
             }
         }
